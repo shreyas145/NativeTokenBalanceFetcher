@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Balance Monitor</title>
+</head>
+<body>
+    <h1>Ethereum Balance Monitor</h1>
+    <form method="post" action="/">
+        <button type="submit">Get Balance</button>
+    </form>
+    {% if balance %}
+        <p>Address: {{ balance.address }}</p>
+        <p>Current Balance: {{ balance.current_balance }} Ether</p>
+        <p>Balance 12 Hours Ago: {{ balance.least_recent_balance }} Ether</p>
+        <p>Percentage Difference: {{ balance.percentage_difference }}%</p>
+    {% endif %}
+</body>
+</html>
