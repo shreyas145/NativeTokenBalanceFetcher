@@ -1,0 +1,16 @@
+The following dependencies have been used in the assignment.
+- Web3
+- Flask
+
+They may have to be installed to run the assignment by calling
+$ pip install web3
+$ pip install Flask
+
+The implementation of the first 2 tasks have been completed.
+- The balance is being fetched from the given Ethereum address
+- Percentage change will be displayed between the current balance and the balance 12 hours ago
+
+The hourly balance is maintained by running a method that fetches the balance every hour and stores the 12 most recent values in order to keep track of the account balance in the last 12 hours and discarding the least recent balance when there are more than 12 balances. This is running in a separate thread so that it would not be affected by the code for fetching the account balance if the button is clicked in the web page.
+
+The web page of the app will be displayed in the console however for my testing purposes it was
+http://127.0.0.1:5000
